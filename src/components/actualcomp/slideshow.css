@@ -1,0 +1,39 @@
+.carousel {
+    position: relative;
+  }
+  
+  .slides {
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .slide {
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  
+  .slide.active {
+    opacity: 1;
+  }
+  
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    outline: none;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+  
