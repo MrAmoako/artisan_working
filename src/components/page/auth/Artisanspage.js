@@ -71,6 +71,7 @@ function Artisanspage() {
 };
 
 
+
   return (
     <div>
     <div className="flex h-screen justify-left items-center ml-20">
@@ -96,15 +97,22 @@ function Artisanspage() {
           onChange={handleNumberChange} 
           className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
         />
-        <button onClick={updateDescription} className="bg-blue hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-5">
+        <button onClick={updateDescription} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-5 transition-all duration-300">
           Update
         </button>
+        <a
+          href="/ugallery"
+          className="ml-2 bg-blue-500 text-white py-3 px-4 text-base font-medium rounded bg-blue-500 hover:bg-blue-700 transition-all duration-300"
+        >
+          Upload some pictures of your work
+        </a>
       </div>
     ) : (
       <p className="text-xl font-bold">loading.</p>
     )}
 
   </div>
+
   <div>
   </div>
   </div>

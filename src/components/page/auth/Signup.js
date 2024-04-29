@@ -133,7 +133,7 @@ const SignUp = () => {
       />
       <button
         onClick={handleSignUp}
-        className="w-full bg-blue text-white py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+        className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600 trasition-all duration-300"
       >
         Sign Up
       </button>

@@ -7,7 +7,9 @@ import SignUp from './components/page/auth/Signup';
 import Login from './components/page/auth/Login';
 import Artisanspage from './components/page/auth/Artisanspage';
 import Client from './components/page/auth/Client';
-import Artisandetails from './components/page/Artisandetails';
+import Uploadgallery from './components/page/auth/firebaseconfig/uploadgallery';
+import Gallery from './components/page/auth/Gallery';
+import Alreadyuploadedpic from './components/page/Alreadyuploadedpic';
 
 function App() {
   return (
@@ -20,7 +22,9 @@ function App() {
         <Route path='/login' element={<Login/>} />
         <Route path='/Artisan' element={<Artisanspage/>} />
         <Route path='/client' element={<Client/>} />
-        <Route path='/details/:userId' element={<Artisandetails/>}/>
+        <Route path='/ugallery' element={<Uploadgallery/>} />
+        <Route path="/gallery/:id" element={<Gallery />} />
+        <Route path="/already" element={<Alreadyuploadedpic />} />
       </Routes>
       </BrowserRouter>
     </div>
