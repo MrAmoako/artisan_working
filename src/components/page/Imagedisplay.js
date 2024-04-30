@@ -23,13 +23,15 @@ const ImageDisplay = ({ userId }) => {
   const [imageUrl2, setImageUrl2] = useState('');
   const [imageUrl3, setImageUrl3] = useState('');
 
+  // Fetch image URLs for the user's profile pictures
   useEffect(() => {
     const fetchImageUrl = async (imageNumber) => {
       try {
-        // Assuming you have a collection named 'users' in Firestore
+        // Get user document from Firestore
         const userDoc = await firebase.firestore().collection('users').doc(userId).get();
         if (userDoc.exists) {
           const userData = userDoc.data();
+          // Update state with the image URL for the corresponding imageNumber
           if (userData && userData[`profilePictureURL${imageNumber}`]) {
             switch (imageNumber) {
               case 1:
@@ -45,6 +47,7 @@ const ImageDisplay = ({ userId }) => {
                 break;
             }
           } else {
+            // If no image URL found, set state to an empty string
             switch (imageNumber) {
               case 1:
                 setImageUrl1('');
@@ -65,18 +68,23 @@ const ImageDisplay = ({ userId }) => {
       }
     };
 
+    // Fetch URLs for all three images
     fetchImageUrl(1);
     fetchImageUrl(2);
     fetchImageUrl(3);
   }, [userId]);
 
+  // Handle image upload
   const handleImageUpload = async (e, imageNumber) => {
     try {
       const file = e.target.files[0];
       const storageRef = firebase.storage().ref();
       const fileRef = storageRef.child(`profile_images/${userId}/image${imageNumber}`);
+      // Upload image to Firebase Storage
       await fileRef.put(file);
+      // Get the download URL of the uploaded image
       const imageUrl = await fileRef.getDownloadURL();
+      // Update Firestore document with the image URL
       const userDocRef = firebase.firestore().collection('users').doc(userId);
       await userDocRef.update({
         [`profilePictureURL${imageNumber}`]: imageUrl
@@ -90,6 +98,7 @@ const ImageDisplay = ({ userId }) => {
     <div className='flex h-screen justify-center items-center'>
       <div className="container mx-auto p-4 mt-10">
         <div className="grid grid-cols-3 gap-4">
+          {/* Input for uploading first image */}
           <div className="relative">
             <input
               type="file"
@@ -99,6 +108,7 @@ const ImageDisplay = ({ userId }) => {
               id="upload1"
             />
             <label htmlFor="upload1" className="block cursor-pointer">
+              {/* Display uploaded image or loading message */}
               {imageUrl1 ? (
                 <img src={imageUrl1} alt="User" className="w-full h-60 rounded-lg" />
               ) : (
@@ -108,6 +118,7 @@ const ImageDisplay = ({ userId }) => {
               )}
             </label>
           </div>
+          {/* Input for uploading second image */}
           <div className="relative">
             <input
               type="file"
@@ -117,6 +128,7 @@ const ImageDisplay = ({ userId }) => {
               id="upload2"
             />
             <label htmlFor="upload2" className="block cursor-pointer">
+              {/* Display uploaded image or loading message */}
               {imageUrl2 ? (
                 <img src={imageUrl2} alt="User" className="w-full h-60 rounded-lg" />
               ) : (
@@ -126,6 +138,7 @@ const ImageDisplay = ({ userId }) => {
               )}
             </label>
           </div>
+          {/* Input for uploading third image */}
           <div className="relative">
             <input
               type="file"
@@ -135,6 +148,7 @@ const ImageDisplay = ({ userId }) => {
               id="upload3"
             />
             <label htmlFor="upload3" className="block cursor-pointer">
+              {/* Display uploaded image or loading message */}
               {imageUrl3 ? (
                 <img src={imageUrl3} alt="User" className="w-full h-60 rounded-lg" />
               ) : (

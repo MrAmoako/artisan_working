@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { auth } from './firebaseconfig/firebase';
 import { useNavigate } from 'react-router-dom';
 
-const Login = ({ history }) => {
+const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -11,8 +11,10 @@ const Login = ({ history }) => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
+      // Sign in with email and password
       await auth.signInWithEmailAndPassword(email, password);
-      navigate('/Artisan')
+      // Redirect to Artisan page after successful login
+      navigate('/Artisan');
     } catch (error) {
       setError(error.message);
     }
@@ -50,7 +52,7 @@ const Login = ({ history }) => {
         {error && <p className="text-red-500 text-xs italic">{error}</p>}
         <div className="flex items-center justify-between">
           <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline trasition-all duration-300"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition-all duration-300"
             type="submit"
           >
             Sign In

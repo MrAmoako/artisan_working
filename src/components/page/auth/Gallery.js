@@ -3,6 +3,7 @@ import ImageDisplay from '../Imagedisplay'
 import { useParams } from 'react-router-dom'
 
 function Gallery() {
+  //to import the id of the user
  const { id } = useParams();
 
   return (

@@ -10,6 +10,7 @@ import Client from './components/page/auth/Client';
 import Uploadgallery from './components/page/auth/firebaseconfig/uploadgallery';
 import Gallery from './components/page/auth/Gallery';
 import Alreadyuploadedpic from './components/page/Alreadyuploadedpic';
+import About from './components/page/About';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path='/ugallery' element={<Uploadgallery/>} />
         <Route path="/gallery/:id" element={<Gallery />} />
         <Route path="/already" element={<Alreadyuploadedpic />} />
+        <Route path="/about" element={<About />} />
       </Routes>
       </BrowserRouter>
     </div>
