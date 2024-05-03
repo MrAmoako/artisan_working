@@ -169,28 +169,6 @@ const SignUp = () => {
         </p>
       </div>
 
-      {/* Verification Code Modal */}
-      {showVerification && (
-        <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center">
-          <div className="bg-white p-6 rounded-lg">
-            <h2 className="text-2xl font-bold mb-4">Enter Verification Code</h2>
-            {verificationError && <p className="text-red-500 text-xs italic mb-4">{verificationError}</p>}
-            <input
-              type="text"
-              placeholder="Verification Code"
-              value={verificationCode}
-              onChange={(e) => setVerificationCode(e.target.value)}
-              className="w-full px-4 py-2 rounded-md border-gray-300 focus:outline-none focus:border-blue-500 mb-4"
-            />
-            <button
-              onClick={handleVerify}
-              className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600 transition-all duration-300"
-            >
-              Verify
-            </button>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

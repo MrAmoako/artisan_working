@@ -51,7 +51,6 @@ const Client = () => {
   };
 
   return (
-
     <div className="">
       {loading ? ( // Show loading animation if data is still loading
         <div className="text-center container mx-auto  mt-10 h-screen flex justify-center items-center">
@@ -63,21 +62,24 @@ const Client = () => {
         </div>
       ) : (
         <div className="pt-[120px]">
-        <input
-          type="text"
-          className="border rounded px-2 py-1 mb-4 w-[500px]"
-          placeholder="Search by job"
-          value={searchTerm}
-          onChange={handleSearch}
-        />
-        {filteredUsers.map((user, index) => (
-          <div key={index} className="ml-3 mr-3 p-2 cursor-pointer border-b " onClick={() => setSelectedUser(user)} >
-            <img src={background} className='rounded-full h-11 w-11 float-left mx-4' alt='Profile Picture' />
+          <input
+            type="text"
+            className="border rounded px-2 py-1 mb-4 w-[500px]"
+            placeholder="Search by job"
+            value={searchTerm}
+            onChange={handleSearch}
+          />
+          {filteredUsers.map((user, index) => (
+            <div key={index} className="ml-3 mr-3 p-2 cursor-pointer border-b " onClick={() => setSelectedUser(user)} >
+              {user.imageUrl ? (
+                <img src={user.imageUrl} className='rounded-full h-11 w-11 float-left mx-4' alt='Profile Picture' />
+              ) : (
+                <img src={background} className='rounded-full h-11 w-11 float-left mx-4' alt='Default Profile Picture' />
+              )}
               <h2 className="font-bold mb-1 text-[15px]  text-left text-black ">{user.name}</h2>
-              <p className="text-black mb-1 text-left text-black">{user.job}</p>
-             
+              <p className="text-black mb-1 text-left text-black">{user.job},{user.jobs}</p>
             </div>
-        ))}
+          ))}
         </div>
       )}
 
