@@ -93,7 +93,7 @@ function Dashboard() {
           </div>
           <div className="lg:w-1/2 flex justify-center lg:justify-end py-8 lg:py-0 px-[7.8px]">
             <div style={{ maxWidth: '600px', width: '100%' }}>
-              <Slider {...sliderSettings} style={{ maxWidth: '100%' }}>
+              <Slider {...sliderSettings} style={{ maxWidth: '100%', }}>
                 <div>
                   <img src={image1} alt="Portrait 1" style={imageStyle} />
                 </div>

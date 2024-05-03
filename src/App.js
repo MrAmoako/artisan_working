@@ -10,6 +10,8 @@ import Client from './components/page/auth/Client';
 import Uploadgallery from './components/page/auth/firebaseconfig/uploadgallery';
 import Gallery from './components/page/auth/Gallery';
 import Alreadyuploadedpic from './components/page/Alreadyuploadedpic';
+import Updaterecords from './components/page/Updaterecords';
+import Profilepic from './components/page/Profilepic';
 
 
 function App() {
@@ -26,7 +28,8 @@ function App() {
         <Route path='/ugallery' element={<Uploadgallery/>} />
         <Route path="/gallery/:id" element={<Gallery />} />
         <Route path="/already" element={<Alreadyuploadedpic />} />
-
+        <Route path='/records' element={<Updaterecords/>} />
+        <Route path='/profile' element={<Profilepic/>} />
       </Routes>
       </BrowserRouter>
     </div>
