@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { auth } from './firebaseconfig/firebase';
 import { useNavigate } from 'react-router-dom';
+import backgroundImage from '../../images/back2.jpg';
 
 const Login = ({ history }) => {
   const navigate = useNavigate();
@@ -19,7 +20,7 @@ const Login = ({ history }) => {
   };
 
   return (
-    <div className="flex h-screen justify-center items-center">
+    <div className="flex h-screen justify-center items-center"   style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover' }}>
       <form onSubmit={handleLogin} className="w-1/3 bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
         <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">

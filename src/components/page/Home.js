@@ -26,7 +26,7 @@ function Home() {
     borderRadius: '8px' // Add border radius for rounded corners
   };
   return (
-    <div>
+    <div >
     <Dashboard />
     <Slider {...sliderSettings} style={{ margin: '-100px auto', maxWidth: '600px' }}>
       <div>
