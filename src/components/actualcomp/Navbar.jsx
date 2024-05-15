@@ -104,7 +104,7 @@ function Navbar() {
         <div className="p-5">
 >>>>>>> Stashed changes
           <a
-            className="text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+            className="text-black transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none   lg:px-2"
             href="/"
             data-twe-nav-link-ref
             >Dashboard</a
@@ -113,7 +113,7 @@ function Navbar() {
 
         <li className="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
           <a
-            className="text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+            className="text-black transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none   lg:px-2"
             href="/client"
             data-twe-nav-link-ref
             >Services</a
@@ -122,12 +122,13 @@ function Navbar() {
 
         <li className="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
           <a
-            className="text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+            className="text-black transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none   lg:px-2"
             href="/signup"
             data-twe-nav-link-ref
             >Become an artisan</a
           >
         </li>
+       
       </ul>
  
     </div>
