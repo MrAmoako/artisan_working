@@ -21,7 +21,7 @@ if (!firebase.apps.length) {
   firebase.app();
 }
 
-const SignUp = () => {
+const ClientSignUp = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
@@ -106,4 +106,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default ClientSignUp;

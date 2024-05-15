@@ -78,7 +78,7 @@ function Dashboard() {
             </p>
             <div className="flex flex-col lg:flex-row space-y-4 sm:flex-row sm:justify-left sm:space-y-0 sm:space-x-4">
               <a
-                href="/client"
+                href="/clientSignup"
                 className="bg-blue-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline flex justify-left transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
               >
                 Request a service

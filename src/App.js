@@ -12,6 +12,8 @@ import Gallery from './components/page/auth/Gallery';
 import Alreadyuploadedpic from './components/page/Alreadyuploadedpic';
 import Updaterecords from './components/page/Updaterecords';
 import Profilepic from './components/page/Profilepic';
+import ClientSignUp from './components/page/auth/Clientsignup';
+import ClientLogin from './components/page/auth/firebaseconfig/Clientsignin';
 
 
 function App() {
@@ -30,6 +32,8 @@ function App() {
         <Route path="/already" element={<Alreadyuploadedpic />} />
         <Route path='/records' element={<Updaterecords/>} />
         <Route path='/profile' element={<Profilepic/>} />
+        <Route path='/clientSignup' element={<ClientSignUp/>} />
+        <Route path='/clientSignin' element={<ClientLogin/>} />
       </Routes>
       </BrowserRouter>
     </div>
