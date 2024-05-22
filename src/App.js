@@ -15,7 +15,6 @@ import Profilepic from './components/page/Profilepic';
 import ClientSignUp from './components/page/auth/Clientsignup';
 import ClientLogin from './components/page/auth/firebaseconfig/Clientsignin';
 
-
 function App() {
   return (
     <div className="App" >

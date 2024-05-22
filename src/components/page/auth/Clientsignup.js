@@ -99,7 +99,7 @@ const ClientSignUp = () => {
           Sign Up
         </button>
         <p className="text-center mt-4">
-          Already have an account? <a href="/login" className="text-blue-500">Login</a>
+          Already have an account? <a href="/clientlogin" className="text-blue-500">Login</a>
         </p>
       </div>
     </div>
